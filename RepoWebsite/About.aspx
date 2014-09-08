@@ -5,4 +5,5 @@
     <h3>Your application description page.</h3>
     <p>Use this area to provide additional information.</p>
     <h1>Josh Whitney</h1>
+    <h3>joshwhitney47@gmail.com</h3>
 </asp:Content>
