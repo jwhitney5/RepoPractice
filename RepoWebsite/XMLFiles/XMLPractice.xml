@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Events>
+  <Event>
+    <EventCode>A</EventCode>
+    <Description>Anniversary</Description>
+    <Active>1</Active>
+  </Event>
+  <Event>
+    <EventCode>B</EventCode>
+    <Description>Birthday</Description>
+    <Active>1</Active>
+  </Event>
+  <Event>
+    <EventCode>O</EventCode>
+    <Description>Other</Description>
+    <Active>1</Active>
+  </Event>
+  <Event>
+    <EventCode>P</EventCode>
+    <Description>Promotion</Description>
+    <Active>1</Active>
+  </Event>
+  <Event>
+    <EventCode>S</EventCode>
+    <Description>Sport</Description>
+    <Active>1</Active>
+  </Event>
+</Events>
