@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="MenuDemo"  description="This is the root of the sitemap (do NOT display)">
+        <siteMapNode url="~/Default.aspx" title="Home"  description="Home Page of Web Page" />
+        <siteMapNode url="~/About.aspx" title="About"  description="About Page" />
+        <siteMapNode url="~/Contact.aspx" title="Contact"  description="Contact Page" />
+        <siteMapNode url="~/XMLFiles/XMLPage.aspx" title="XML Practice"  description="XML Demo" />
+      
+      <siteMapNode title="Products" description="Products menu group">
+        <siteMapNode url="~/SiteMapPages/Hardware.aspx" title="Hardware" description="Hardware Page"/>
+        <siteMapNode url="~/SiteMapPages/Software.aspx" title="Software" description="Software Page"/>
+      </siteMapNode>
+      
+      <siteMapNode title="Services" description="Services menu group">
+        <siteMapNode url="~/SiteMapPages/Training.aspx" title="Training" description="Training Page"/>
+        <siteMapNode url="~/SiteMapPages/Consulting.aspx" title="Consulting" description="Consulting Page"/>
+        <siteMapNode url="~/SiteMapPages/Support.aspx" title="Support" description="Support Page"/>
+      </siteMapNode>
+      
+    </siteMapNode>
+</siteMap>
