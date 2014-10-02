@@ -26,5 +26,9 @@
       
       </siteMapNode><!--Closes Services Node-->
       
+      <siteMapNode title="Demos" description="Demos menu group">
+          <siteMapNode url="~/DemoPages/ListViewSpecialEventsCRUD.aspx" title="SpecialEventsCRUD" description="Special Events Page"/>
+      </siteMapNode>
+      
     </siteMapNode>
 </siteMap>
