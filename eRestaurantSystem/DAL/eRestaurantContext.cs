@@ -11,17 +11,16 @@ using System.Data.Entity;
 
 namespace eRestaurantSystem.DAL
 {
-    //hook-up to entity framework via the DbContext base class
-    internal class eRestaurantContext:DbContext
+    //hookup to Entity Framework via the DbContext base class
+    internal class eRestaurantContext : DbContext
     {
-        //constructor, pass to the base class the name value for the 
-        //connection string to the database found in webConnectionStrings.config
+        //constructor pass to the base class the name value for the 
+        //connection string to the database found in WebConnectionStrings.config
         public eRestaurantContext() : base("name=EatIn") { }
 
-        //One DBSet is created for each entity to be referenced by your application
+        //One DbSet is created for each entity to be referenced by your application
         public DbSet<SpecialEvent> SpecialEvents { get; set; }
-        //public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
         //public DbSet<Table> Tables { get; set; }
-
     }
 }

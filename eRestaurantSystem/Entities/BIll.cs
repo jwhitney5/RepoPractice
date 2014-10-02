@@ -10,9 +10,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eRestaurantSystem.Entities
 {
-    public class BIll
+    public class Bill
     {
-        [Key]
+      
 
     }
 }
