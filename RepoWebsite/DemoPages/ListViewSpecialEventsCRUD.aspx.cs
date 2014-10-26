@@ -11,4 +11,10 @@ public partial class DemoPages_ListViewSpecialEventsCRUD : System.Web.UI.Page
     {
 
     }
+
+    protected void CheckForException(object sender, ObjectDataSourceStatusEventArgs e)
+    {
+        MessageUserControl.HandleDataBoundException(e);
+    }
+
 }

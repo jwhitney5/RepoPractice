@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="ListViewSpecialEventsCRUD.aspx.cs" Inherits="DemoPages_ListViewSpecialEventsCRUD" %>
 
+<%@ Register src="../UserControls/MessageUserControl.ascx" 
+    tagname="MessageUserControl" tagprefix="my" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <h1>Special Events CRUD using ListView</h1>
     <asp:ListView ID="SpecialEventsDisplay" runat="server" DataSourceID="ODSSpecialEvents" InsertItemPosition="LastItem" DataKeyNames="EventCode">
@@ -123,6 +126,9 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
+
+    <my:MessageUserControl ID="MessageUserControl" runat="server" />
+
     <asp:ObjectDataSource ID="ODSSpecialEvents" runat="server" 
         DataObjectTypeName="eRestaurantSystem.Entities.SpecialEvent" 
         DeleteMethod="SpecialEvents_Delete" 
