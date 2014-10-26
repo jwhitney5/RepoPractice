@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace eRestaurantSystem.POCOs
 {
-    public class CategoryMenuItems
+    public class TotalItemSalesByMenuCategory
     {
-        public string CategoryDescription { get; set; }
+        public string CatDescription { get; set; }
         public string ItemDescription { get; set; }
+        public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public int? Calories { get; set; }
-        public string Comment { get; set; }
+        public decimal Cost { get; set; }
     }
 }

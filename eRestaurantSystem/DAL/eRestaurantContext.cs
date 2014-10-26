@@ -12,7 +12,7 @@ using System.Data.Entity;
 namespace eRestaurantSystem.DAL
 {
     //hookup to Entity Framework via the DbContext base class
-    internal class eRestaurantContext : DbContext
+    public class eRestaurantContext : DbContext
     {
         //constructor pass to the base class the name value for the 
         //connection string to the database found in WebConnectionStrings.config
@@ -21,8 +21,25 @@ namespace eRestaurantSystem.DAL
         //One DbSet is created for each entity to be referenced by your application
         public DbSet<SpecialEvent> SpecialEvents { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-        public DbSet<MenuCategories> MenuCategories { get; set; }
-        public DbSet<Items> Items { get; set; }
-        //public DbSet<Table> Tables { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<MenuCategory> MenuCategories { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Table> Tables { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<Reservation>().HasMany(r => r.Tables)
+                .WithMany(t => t.Reservations)
+                .Map(mapping =>
+                {
+                    mapping.ToTable("ReservationTables");
+                    mapping.MapLeftKey("TableID");
+                    mapping.MapRightKey("ReservationID");
+                });
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
